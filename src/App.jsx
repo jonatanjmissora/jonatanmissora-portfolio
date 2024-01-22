@@ -22,6 +22,12 @@ import proyecto3 from "./img/proyecto3.webp";
 import proyecto4 from "./img/proyecto4.webp";
 import proyecto5 from "./img/proyecto5.webp";
 import proyecto6 from "./img/proyecto6.webp";
+
+import {Hero} from "./components/Hero"
+import {Header} from "./components/Header"
+import {Proyects} from "./components/Proyects"
+import {About} from "./components/About"
+import {Contact} from "./components/Contact"
 import "./index.css";
 
 export default function App() {
@@ -33,26 +39,16 @@ export default function App() {
 
   return (
     <>
-      <Header
-        pagContRef={pagContRef}
-        navRef={navRef}
-        pag1Ref={pag1Ref}
-        pag2Ref={pag2Ref}
-        pag3Ref={pag3Ref}
-      />
-      <Main
-        pagContRef={pagContRef}
-        navRef={navRef}
-        pag1Ref={pag1Ref}
-        pag2Ref={pag2Ref}
-        pag3Ref={pag3Ref}
-      />
-      <Redes />
+      <Header />
+      <Hero />
+      <Proyects />
+      <About />
+      <Contact />
     </>
   );
 }
 
-const Header = ({ pagContRef, navRef, pag1Ref, pag2Ref, pag3Ref }) => {
+const Header2 = ({ pagContRef, navRef, pag1Ref, pag2Ref, pag3Ref }) => {
   const handlePagination = (page) => {
     if (page === "principal") {
       pagContRef.current.style.transform = "translateX(0%)";
